@@ -38,7 +38,7 @@ export function httpHandle(
   }
 
   /**
-   * On Listenting HTTP
+   * On Listening HTTP
    * @param server
    */
   const onListening = (): void => {

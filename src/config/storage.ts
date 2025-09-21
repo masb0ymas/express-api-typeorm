@@ -10,5 +10,5 @@ export const storage = Storage.create({
     bucket: env.STORAGE_BUCKET_NAME,
     expires: env.STORAGE_SIGN_EXPIRED,
     region: env.STORAGE_REGION,
-  } as S3StorageParams,
+  } as S3StorageParams, // Change this type for using S3, GCS or MinIO
 })
