@@ -3,7 +3,7 @@ import { logger } from '~/config/logger'
 import { AppDataSource } from './connection'
 
 async function dropDB() {
-  logger.info('Dropping database...', AppDataSource.options.database)
+  logger.info('Dropping database...', AppDataSource.options.database as any)
 
   // drop database
   await dropDatabase({
