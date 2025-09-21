@@ -36,14 +36,14 @@ importers:
         specifier: ^2.8.5
         version: 2.8.5
       cronstrue:
-        specifier: ^2.59.0
-        version: 2.59.0
+        specifier: ^3.3.0
+        version: 3.3.0
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
       dotenv:
-        specifier: ^16.6.1
-        version: 16.6.1
+        specifier: ^17.2.2
+        version: 17.2.2
       express:
         specifier: ^4.21.2
         version: 4.21.2
@@ -51,8 +51,8 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0
       express-rate-limit:
-        specifier: ^7.5.1
-        version: 7.5.1(express@4.21.2)
+        specifier: ^8.1.0
+        version: 8.1.0(express@4.21.2)
       express-useragent:
         specifier: ^1.0.15
         version: 1.0.15
@@ -81,8 +81,8 @@ importers:
         specifier: ^3.0.3
         version: 3.0.3
       nodemailer:
-        specifier: ^6.10.1
-        version: 6.10.1
+        specifier: ^7.0.6
+        version: 7.0.6
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -129,8 +129,8 @@ importers:
         specifier: ^11.1.0
         version: 11.1.0
       zod:
-        specifier: ^3.25.76
-        version: 3.25.76
+        specifier: ^4.1.11
+        version: 4.1.11
     devDependencies:
       '@eslint/js':
         specifier: ^9.36.0
@@ -160,17 +160,17 @@ importers:
         specifier: ^4.17.20
         version: 4.17.20
       '@types/multer':
-        specifier: ^1.4.13
-        version: 1.4.13
+        specifier: ^2.0.0
+        version: 2.0.0
       '@types/node':
-        specifier: ^22.18.6
-        version: 22.18.6
+        specifier: ^24.5.2
+        version: 24.5.2
       '@types/node-cron':
         specifier: ^3.0.11
         version: 3.0.11
       '@types/nodemailer':
-        specifier: ^6.4.19
-        version: 6.4.19
+        specifier: ^7.0.1
+        version: 7.0.1
       '@types/request-ip':
         specifier: ^0.0.41
         version: 0.0.41
@@ -194,7 +194,7 @@ importers:
         version: 3.6.2
       release-it:
         specifier: ^18.1.2
-        version: 18.1.2(@types/node@22.18.6)(typescript@5.9.2)
+        version: 18.1.2(@types/node@24.5.2)(typescript@5.9.2)
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -252,8 +252,8 @@ packages:
     resolution: {integrity: sha512-/P74KDJhOijnIAQR93sq1DQn8vbU3WaPZDyy1XUMRJJIY6iEJnDo1toD9XY6AFDz5TRto8/8NbcXT30AMOUtJQ==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/client-ses@3.893.0':
-    resolution: {integrity: sha512-RvFv9Q/yJQz+gOAYW5RKbaxVPzpHKVjr0EFQRKj62gkO++Ax008+PZ8XVW6g34+RVKGHm362zoVuXYGokvcGjg==}
+  '@aws-sdk/client-sesv2@3.893.0':
+    resolution: {integrity: sha512-n0SJ/BGbpUz7FcatGtQHTK5Zaq8Z4xgad1tqvJzhoSjHerivVEoR63o1R7V2GiREPfcws2Gd0ROuajOLS2kaOg==}
     engines: {node: '>=18.0.0'}
 
   '@aws-sdk/client-sso@3.893.0':
@@ -1005,17 +1005,17 @@ packages:
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
-  '@types/multer@1.4.13':
-    resolution: {integrity: sha512-bhhdtPw7JqCiEfC9Jimx5LqX9BDIPJEh2q/fQ4bqbBPtyEZYr3cvF22NwG0DmPZNYA0CAf2CnqDB4KIGGpJcaw==}
+  '@types/multer@2.0.0':
+    resolution: {integrity: sha512-C3Z9v9Evij2yST3RSBktxP9STm6OdMc5uR1xF1SGr98uv8dUlAL2hqwrZ3GVB3uyMyiegnscEK6PGtYvNrjTjw==}
 
   '@types/node-cron@3.0.11':
     resolution: {integrity: sha512-0ikrnug3/IyneSHqCBeslAhlK2aBfYek1fGo4bP4QnZPmiqSGRK+Oy7ZMisLWkesffJvQ1cqAcBnJC+8+nxIAg==}
 
-  '@types/node@22.18.6':
-    resolution: {integrity: sha512-r8uszLPpeIWbNKtvWRt/DbVi5zbqZyj1PTmhRMqBMvDnaz1QpmSKujUtJLrqGZeoM8v72MfYggDceY4K1itzWQ==}
+  '@types/node@24.5.2':
+    resolution: {integrity: sha512-FYxk1I7wPv3K2XBaoyH2cTnocQEu8AOZ60hPbsyukMPLv5/5qr7V1i8PLHdl6Zf87I+xZXFvPCXYjiTFq+YSDQ==}
 
-  '@types/nodemailer@6.4.19':
-    resolution: {integrity: sha512-Fi8DwmuAduTk1/1MpkR9EwS0SsDvYXx5RxivAVII1InDCIxmhj/iQm3W8S3EVb/0arnblr6PK0FK4wYa7bwdLg==}
+  '@types/nodemailer@7.0.1':
+    resolution: {integrity: sha512-UfHAghPmGZVzaL8x9y+mKZMWyHC399+iq0MOmya5tIyenWX3lcdSb60vOmp0DocR6gCDTYTozv/ULQnREyyjkg==}
 
   '@types/parse-path@7.1.0':
     resolution: {integrity: sha512-EULJ8LApcVEPbrfND0cRQqutIOdiIgJ1Mgrhpy755r14xMohPTEpkV/k28SJvuOs9bHRFW8x+KeDAEPiGQPB9Q==}
@@ -1474,8 +1474,8 @@ packages:
       typescript:
         optional: true
 
-  cronstrue@2.59.0:
-    resolution: {integrity: sha512-YKGmAy84hKH+hHIIER07VCAHf9u0Ldelx1uU6EBxsRPDXIA1m5fsKmJfyC3xBhw6cVC/1i83VdbL4PvepTrt8A==}
+  cronstrue@3.3.0:
+    resolution: {integrity: sha512-iwJytzJph1hosXC09zY8F5ACDJKerr0h3/2mOxg9+5uuFObYlgK0m35uUPk4GCvhHc2abK7NfnR9oMqY0qZFAg==}
     hasBin: true
 
   cross-spawn@6.0.6:
@@ -1600,6 +1600,10 @@ packages:
 
   dotenv@16.6.1:
     resolution: {integrity: sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==}
+    engines: {node: '>=12'}
+
+  dotenv@17.2.2:
+    resolution: {integrity: sha512-Sf2LSQP+bOlhKWWyhFsn0UsfdK/kCWRv1iuA2gXAwt3dyNabr6QSj00I2V10pidqz69soatm9ZwZvpQMTIOd5Q==}
     engines: {node: '>=12'}
 
   dunder-proto@1.0.1:
@@ -1778,8 +1782,8 @@ packages:
   express-async-handler@1.2.0:
     resolution: {integrity: sha512-rCSVtPXRmQSW8rmik/AIb2P0op6l7r1fMW538yyvTMltCO4xQEWMmobfrIxN2V1/mVrgxB8Az3reYF6yUZw37w==}
 
-  express-rate-limit@7.5.1:
-    resolution: {integrity: sha512-7iN8iPMDzOMHPUYllBEsQdWVB6fPDMPqwjBaFrgr4Jgr/+okjvzAy+UHlYYL/Vs0OsOrMkwS6PJDkFlJwoxUnw==}
+  express-rate-limit@8.1.0:
+    resolution: {integrity: sha512-4nLnATuKupnmwqiJc27b4dCFmB/T60ExgmtDD7waf4LdrbJ8CPZzZRHYErDYNhoz+ql8fUdYwM/opf90PoPAQA==}
     engines: {node: '>= 16'}
     peerDependencies:
       express: '>= 4.11'
@@ -2674,8 +2678,8 @@ packages:
     resolution: {integrity: sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==}
     hasBin: true
 
-  nodemailer@6.10.1:
-    resolution: {integrity: sha512-Z+iLaBGVaSjbIzQ4pX6XV41HrooLsQ10ZWPUehGmuantvzWoDVBnmsdUcOIDM1t+yPor5pDhVlDESgOMEGxhHA==}
+  nodemailer@7.0.6:
+    resolution: {integrity: sha512-F44uVzgwo49xboqbFgBGkRaiMgtoBrBEWCVincJPK9+S9Adkzt/wXCLKbf7dxucmxfTI5gHGB+bEmdyzN6QKjw==}
     engines: {node: '>=6.0.0'}
 
   nodemon@3.1.10:
@@ -3650,8 +3654,8 @@ packages:
   underscore@1.13.7:
     resolution: {integrity: sha512-GMXzWtsc57XAtguZgaQViUOzs0KTkk8ojr3/xAxXLITqf/3EMwxC0inyETfDFjH/Krbhuep0HNbbjI9i/q3F3g==}
 
-  undici-types@6.21.0:
-    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+  undici-types@7.12.0:
+    resolution: {integrity: sha512-goOacqME2GYyOZZfb5Lgtu+1IDmAlAEu5xnD3+xTzS10hT0vzpf0SPjkXwAw9Jm+4n/mQGDP3LO8CPbYROeBfQ==}
 
   undici@6.21.1:
     resolution: {integrity: sha512-q/1rj5D0/zayJB2FraXdaWxbhWiNKDvu8naDT2dl1yTlvJp4BLtOcp2a5BvgGNQpYYJzau7tf1WgKv3b+7mqpQ==}
@@ -3844,8 +3848,8 @@ packages:
     engines: {node: '>=8.0.0'}
     hasBin: true
 
-  zod@3.25.76:
-    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+  zod@4.1.11:
+    resolution: {integrity: sha512-WPsqwxITS2tzx1bzhIKsEs19ABD5vmCVa4xBo2tq/SrV4RNZtfws1EnCWQXM6yh8bD08a1idvkB5MZSBiZsjwg==}
 
 snapshots:
 
@@ -3980,7 +3984,7 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-ses@3.893.0':
+  '@aws-sdk/client-sesv2@3.893.0':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
@@ -3991,6 +3995,7 @@ snapshots:
       '@aws-sdk/middleware-recursion-detection': 3.893.0
       '@aws-sdk/middleware-user-agent': 3.893.0
       '@aws-sdk/region-config-resolver': 3.893.0
+      '@aws-sdk/signature-v4-multi-region': 3.893.0
       '@aws-sdk/types': 3.893.0
       '@aws-sdk/util-endpoints': 3.893.0
       '@aws-sdk/util-user-agent-browser': 3.893.0
@@ -4020,7 +4025,6 @@ snapshots:
       '@smithy/util-middleware': 4.1.1
       '@smithy/util-retry': 4.1.2
       '@smithy/util-utf8': 4.1.0
-      '@smithy/util-waiter': 4.1.1
       tslib: 2.8.1
     transitivePeerDependencies:
       - aws-crt
@@ -4502,128 +4506,128 @@ snapshots:
 
   '@inquirer/ansi@1.0.0': {}
 
-  '@inquirer/checkbox@4.2.4(@types/node@22.18.6)':
+  '@inquirer/checkbox@4.2.4(@types/node@24.5.2)':
     dependencies:
       '@inquirer/ansi': 1.0.0
-      '@inquirer/core': 10.2.2(@types/node@22.18.6)
+      '@inquirer/core': 10.2.2(@types/node@24.5.2)
       '@inquirer/figures': 1.0.13
-      '@inquirer/type': 3.0.8(@types/node@22.18.6)
+      '@inquirer/type': 3.0.8(@types/node@24.5.2)
       yoctocolors-cjs: 2.1.3
     optionalDependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
-  '@inquirer/confirm@5.1.18(@types/node@22.18.6)':
+  '@inquirer/confirm@5.1.18(@types/node@24.5.2)':
     dependencies:
-      '@inquirer/core': 10.2.2(@types/node@22.18.6)
-      '@inquirer/type': 3.0.8(@types/node@22.18.6)
+      '@inquirer/core': 10.2.2(@types/node@24.5.2)
+      '@inquirer/type': 3.0.8(@types/node@24.5.2)
     optionalDependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
-  '@inquirer/core@10.2.2(@types/node@22.18.6)':
+  '@inquirer/core@10.2.2(@types/node@24.5.2)':
     dependencies:
       '@inquirer/ansi': 1.0.0
       '@inquirer/figures': 1.0.13
-      '@inquirer/type': 3.0.8(@types/node@22.18.6)
+      '@inquirer/type': 3.0.8(@types/node@24.5.2)
       cli-width: 4.1.0
       mute-stream: 2.0.0
       signal-exit: 4.1.0
       wrap-ansi: 6.2.0
       yoctocolors-cjs: 2.1.3
     optionalDependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
-  '@inquirer/editor@4.2.20(@types/node@22.18.6)':
+  '@inquirer/editor@4.2.20(@types/node@24.5.2)':
     dependencies:
-      '@inquirer/core': 10.2.2(@types/node@22.18.6)
-      '@inquirer/external-editor': 1.0.2(@types/node@22.18.6)
-      '@inquirer/type': 3.0.8(@types/node@22.18.6)
+      '@inquirer/core': 10.2.2(@types/node@24.5.2)
+      '@inquirer/external-editor': 1.0.2(@types/node@24.5.2)
+      '@inquirer/type': 3.0.8(@types/node@24.5.2)
     optionalDependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
-  '@inquirer/expand@4.0.20(@types/node@22.18.6)':
+  '@inquirer/expand@4.0.20(@types/node@24.5.2)':
     dependencies:
-      '@inquirer/core': 10.2.2(@types/node@22.18.6)
-      '@inquirer/type': 3.0.8(@types/node@22.18.6)
+      '@inquirer/core': 10.2.2(@types/node@24.5.2)
+      '@inquirer/type': 3.0.8(@types/node@24.5.2)
       yoctocolors-cjs: 2.1.3
     optionalDependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
-  '@inquirer/external-editor@1.0.2(@types/node@22.18.6)':
+  '@inquirer/external-editor@1.0.2(@types/node@24.5.2)':
     dependencies:
       chardet: 2.1.0
       iconv-lite: 0.7.0
     optionalDependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
   '@inquirer/figures@1.0.13': {}
 
-  '@inquirer/input@4.2.4(@types/node@22.18.6)':
+  '@inquirer/input@4.2.4(@types/node@24.5.2)':
     dependencies:
-      '@inquirer/core': 10.2.2(@types/node@22.18.6)
-      '@inquirer/type': 3.0.8(@types/node@22.18.6)
+      '@inquirer/core': 10.2.2(@types/node@24.5.2)
+      '@inquirer/type': 3.0.8(@types/node@24.5.2)
     optionalDependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
-  '@inquirer/number@3.0.20(@types/node@22.18.6)':
+  '@inquirer/number@3.0.20(@types/node@24.5.2)':
     dependencies:
-      '@inquirer/core': 10.2.2(@types/node@22.18.6)
-      '@inquirer/type': 3.0.8(@types/node@22.18.6)
+      '@inquirer/core': 10.2.2(@types/node@24.5.2)
+      '@inquirer/type': 3.0.8(@types/node@24.5.2)
     optionalDependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
-  '@inquirer/password@4.0.20(@types/node@22.18.6)':
-    dependencies:
-      '@inquirer/ansi': 1.0.0
-      '@inquirer/core': 10.2.2(@types/node@22.18.6)
-      '@inquirer/type': 3.0.8(@types/node@22.18.6)
-    optionalDependencies:
-      '@types/node': 22.18.6
-
-  '@inquirer/prompts@7.8.6(@types/node@22.18.6)':
-    dependencies:
-      '@inquirer/checkbox': 4.2.4(@types/node@22.18.6)
-      '@inquirer/confirm': 5.1.18(@types/node@22.18.6)
-      '@inquirer/editor': 4.2.20(@types/node@22.18.6)
-      '@inquirer/expand': 4.0.20(@types/node@22.18.6)
-      '@inquirer/input': 4.2.4(@types/node@22.18.6)
-      '@inquirer/number': 3.0.20(@types/node@22.18.6)
-      '@inquirer/password': 4.0.20(@types/node@22.18.6)
-      '@inquirer/rawlist': 4.1.8(@types/node@22.18.6)
-      '@inquirer/search': 3.1.3(@types/node@22.18.6)
-      '@inquirer/select': 4.3.4(@types/node@22.18.6)
-    optionalDependencies:
-      '@types/node': 22.18.6
-
-  '@inquirer/rawlist@4.1.8(@types/node@22.18.6)':
-    dependencies:
-      '@inquirer/core': 10.2.2(@types/node@22.18.6)
-      '@inquirer/type': 3.0.8(@types/node@22.18.6)
-      yoctocolors-cjs: 2.1.3
-    optionalDependencies:
-      '@types/node': 22.18.6
-
-  '@inquirer/search@3.1.3(@types/node@22.18.6)':
-    dependencies:
-      '@inquirer/core': 10.2.2(@types/node@22.18.6)
-      '@inquirer/figures': 1.0.13
-      '@inquirer/type': 3.0.8(@types/node@22.18.6)
-      yoctocolors-cjs: 2.1.3
-    optionalDependencies:
-      '@types/node': 22.18.6
-
-  '@inquirer/select@4.3.4(@types/node@22.18.6)':
+  '@inquirer/password@4.0.20(@types/node@24.5.2)':
     dependencies:
       '@inquirer/ansi': 1.0.0
-      '@inquirer/core': 10.2.2(@types/node@22.18.6)
-      '@inquirer/figures': 1.0.13
-      '@inquirer/type': 3.0.8(@types/node@22.18.6)
+      '@inquirer/core': 10.2.2(@types/node@24.5.2)
+      '@inquirer/type': 3.0.8(@types/node@24.5.2)
+    optionalDependencies:
+      '@types/node': 24.5.2
+
+  '@inquirer/prompts@7.8.6(@types/node@24.5.2)':
+    dependencies:
+      '@inquirer/checkbox': 4.2.4(@types/node@24.5.2)
+      '@inquirer/confirm': 5.1.18(@types/node@24.5.2)
+      '@inquirer/editor': 4.2.20(@types/node@24.5.2)
+      '@inquirer/expand': 4.0.20(@types/node@24.5.2)
+      '@inquirer/input': 4.2.4(@types/node@24.5.2)
+      '@inquirer/number': 3.0.20(@types/node@24.5.2)
+      '@inquirer/password': 4.0.20(@types/node@24.5.2)
+      '@inquirer/rawlist': 4.1.8(@types/node@24.5.2)
+      '@inquirer/search': 3.1.3(@types/node@24.5.2)
+      '@inquirer/select': 4.3.4(@types/node@24.5.2)
+    optionalDependencies:
+      '@types/node': 24.5.2
+
+  '@inquirer/rawlist@4.1.8(@types/node@24.5.2)':
+    dependencies:
+      '@inquirer/core': 10.2.2(@types/node@24.5.2)
+      '@inquirer/type': 3.0.8(@types/node@24.5.2)
       yoctocolors-cjs: 2.1.3
     optionalDependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
-  '@inquirer/type@3.0.8(@types/node@22.18.6)':
+  '@inquirer/search@3.1.3(@types/node@24.5.2)':
+    dependencies:
+      '@inquirer/core': 10.2.2(@types/node@24.5.2)
+      '@inquirer/figures': 1.0.13
+      '@inquirer/type': 3.0.8(@types/node@24.5.2)
+      yoctocolors-cjs: 2.1.3
     optionalDependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
+
+  '@inquirer/select@4.3.4(@types/node@24.5.2)':
+    dependencies:
+      '@inquirer/ansi': 1.0.0
+      '@inquirer/core': 10.2.2(@types/node@24.5.2)
+      '@inquirer/figures': 1.0.13
+      '@inquirer/type': 3.0.8(@types/node@24.5.2)
+      yoctocolors-cjs: 2.1.3
+    optionalDependencies:
+      '@types/node': 24.5.2
+
+  '@inquirer/type@3.0.8(@types/node@24.5.2)':
+    optionalDependencies:
+      '@types/node': 24.5.2
 
   '@isaacs/balanced-match@4.0.1': {}
 
@@ -5092,18 +5096,18 @@ snapshots:
   '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
   '@types/caseless@0.12.5': {}
 
   '@types/compression@1.8.1':
     dependencies:
       '@types/express': 5.0.3
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
   '@types/cookie-parser@1.4.9(@types/express@5.0.3)':
     dependencies:
@@ -5111,13 +5115,13 @@ snapshots:
 
   '@types/cors@2.8.19':
     dependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
   '@types/estree@1.0.8': {}
 
   '@types/express-serve-static-core@5.0.7':
     dependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
       '@types/qs': 6.14.0
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.5
@@ -5143,7 +5147,7 @@ snapshots:
   '@types/jsonwebtoken@9.0.10':
     dependencies:
       '@types/ms': 2.1.0
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
   '@types/lodash@4.17.20': {}
 
@@ -5151,20 +5155,20 @@ snapshots:
 
   '@types/ms@2.1.0': {}
 
-  '@types/multer@1.4.13':
+  '@types/multer@2.0.0':
     dependencies:
       '@types/express': 5.0.3
 
   '@types/node-cron@3.0.11': {}
 
-  '@types/node@22.18.6':
+  '@types/node@24.5.2':
     dependencies:
-      undici-types: 6.21.0
+      undici-types: 7.12.0
 
-  '@types/nodemailer@6.4.19':
+  '@types/nodemailer@7.0.1':
     dependencies:
-      '@aws-sdk/client-ses': 3.893.0
-      '@types/node': 22.18.6
+      '@aws-sdk/client-sesv2': 3.893.0
+      '@types/node': 24.5.2
     transitivePeerDependencies:
       - aws-crt
 
@@ -5178,24 +5182,24 @@ snapshots:
 
   '@types/request-ip@0.0.41':
     dependencies:
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
   '@types/request@2.48.13':
     dependencies:
       '@types/caseless': 0.12.5
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
       '@types/tough-cookie': 4.0.5
       form-data: 2.5.5
 
   '@types/send@0.17.5':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
 
   '@types/serve-static@1.15.8':
     dependencies:
       '@types/http-errors': 2.0.5
-      '@types/node': 22.18.6
+      '@types/node': 24.5.2
       '@types/send': 0.17.5
 
   '@types/swagger-jsdoc@6.0.4': {}
@@ -5675,7 +5679,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.2
 
-  cronstrue@2.59.0: {}
+  cronstrue@3.3.0: {}
 
   cross-spawn@6.0.6:
     dependencies:
@@ -5783,6 +5787,8 @@ snapshots:
       type-fest: 4.41.0
 
   dotenv@16.6.1: {}
+
+  dotenv@17.2.2: {}
 
   dunder-proto@1.0.1:
     dependencies:
@@ -6041,9 +6047,10 @@ snapshots:
 
   express-async-handler@1.2.0: {}
 
-  express-rate-limit@7.5.1(express@4.21.2):
+  express-rate-limit@8.1.0(express@4.21.2):
     dependencies:
       express: 4.21.2
+      ip-address: 10.0.1
 
   express-useragent@1.0.15: {}
 
@@ -6499,12 +6506,12 @@ snapshots:
 
   ini@4.1.1: {}
 
-  inquirer@12.3.0(@types/node@22.18.6):
+  inquirer@12.3.0(@types/node@24.5.2):
     dependencies:
-      '@inquirer/core': 10.2.2(@types/node@22.18.6)
-      '@inquirer/prompts': 7.8.6(@types/node@22.18.6)
-      '@inquirer/type': 3.0.8(@types/node@22.18.6)
-      '@types/node': 22.18.6
+      '@inquirer/core': 10.2.2(@types/node@24.5.2)
+      '@inquirer/prompts': 7.8.6(@types/node@24.5.2)
+      '@inquirer/type': 3.0.8(@types/node@24.5.2)
+      '@types/node': 24.5.2
       ansi-escapes: 4.3.2
       mute-stream: 2.0.0
       run-async: 3.0.0
@@ -6973,7 +6980,7 @@ snapshots:
 
   node-gyp-build@4.8.4: {}
 
-  nodemailer@6.10.1: {}
+  nodemailer@7.0.6: {}
 
   nodemon@3.1.10:
     dependencies:
@@ -7452,7 +7459,7 @@ snapshots:
     dependencies:
       rc: 1.2.8
 
-  release-it@18.1.2(@types/node@22.18.6)(typescript@5.9.2):
+  release-it@18.1.2(@types/node@24.5.2)(typescript@5.9.2):
     dependencies:
       '@iarna/toml': 2.2.5
       '@octokit/rest': 21.0.2
@@ -7463,7 +7470,7 @@ snapshots:
       execa: 9.5.2
       git-url-parse: 16.0.0
       globby: 14.0.2
-      inquirer: 12.3.0(@types/node@22.18.6)
+      inquirer: 12.3.0(@types/node@24.5.2)
       issue-parser: 7.0.1
       lodash: 4.17.21
       mime-types: 2.1.35
@@ -8047,7 +8054,7 @@ snapshots:
 
   underscore@1.13.7: {}
 
-  undici-types@6.21.0: {}
+  undici-types@7.12.0: {}
 
   undici@6.21.1: {}
 
@@ -8252,4 +8259,4 @@ snapshots:
     optionalDependencies:
       commander: 9.5.0
 
-  zod@3.25.76: {}
+  zod@4.1.11: {}
