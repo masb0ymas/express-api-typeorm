@@ -1,7 +1,7 @@
 import compression from 'compression'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
-import express, { Application, Request, Response } from 'express'
+import express, { Application, ErrorRequestHandler, Request, Response } from 'express'
 import userAgent from 'express-useragent'
 import helmet from 'helmet'
 import hpp from 'hpp'
@@ -65,13 +65,13 @@ export class App {
 
   public get create() {
     // handle the error validation
-    this._app.use(expressErrorValidation)
+    this._app.use(expressErrorValidation as ErrorRequestHandler)
 
     // handle the error typeorm
-    this._app.use(expressErrorTypeorm)
+    this._app.use(expressErrorTypeorm as ErrorRequestHandler)
 
     // handle the global error
-    this._app.use(expressErrorHandle)
+    this._app.use(expressErrorHandle as ErrorRequestHandler)
 
     return this._app
   }
