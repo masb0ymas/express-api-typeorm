@@ -124,24 +124,24 @@ Base API using [express-api](https://github.com/masb0ymas/express-api)
 This project follows a **layered architecture** pattern with clear separation of concerns:
 
 ```
-┌─────────────────────────────────────────┐
+┌──────────────────────────────────────────┐
 │          Handler Layer (Controller)      │
 │     HTTP Request/Response Handling       │
-└─────────────────────────────────────────┘
+└──────────────────────────────────────────┘
                     ↓
-┌─────────────────────────────────────────┐
+┌──────────────────────────────────────────┐
 │           Service Layer                  │
 │    Business Logic & Validation           │
-└─────────────────────────────────────────┘
+└──────────────────────────────────────────┘
                     ↓
-┌─────────────────────────────────────────┐
+┌──────────────────────────────────────────┐
 │      Repository Layer (TypeORM)          │
 │         Data Access & Queries            │
-└─────────────────────────────────────────┘
+└──────────────────────────────────────────┘
                     ↓
-┌─────────────────────────────────────────┐
+┌──────────────────────────────────────────┐
 │          PostgreSQL Database             │
-└─────────────────────────────────────────┘
+└──────────────────────────────────────────┘
 ```
 
 ### Key Architectural Principles
@@ -630,6 +630,9 @@ services:
     environment:
       - NODE_ENV=production
       - TYPEORM_HOST=postgres
+      - TYPEORM_USERNAME=postgres
+      - TYPEORM_PASSWORD=password
+      - TYPEORM_DATABASE=express_typeorm
     depends_on:
       - postgres
   
