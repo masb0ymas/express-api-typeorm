@@ -24,7 +24,6 @@
     "db:reset": "npm-run-all db:schema-drop db:schema-sync",
     "db:sync": "npm-run-all db:create db:reset",
     "prerelease": "npm-run-all prebuild",
-    "postrelease": "git push --follow-tags origin main",
     "release": "release-it",
     "release:pre": "release-it --preRelease=beta",
     "release:patch": "release-it patch",
