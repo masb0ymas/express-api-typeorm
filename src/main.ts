@@ -1,4 +1,5 @@
 import http from 'http'
+
 import { initDatabase } from './app/database/connection'
 import Job from './app/job'
 import { App } from './config/app'

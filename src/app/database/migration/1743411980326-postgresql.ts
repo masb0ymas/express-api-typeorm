@@ -1,4 +1,5 @@
 import { MigrationInterface, QueryRunner } from 'typeorm'
+
 import { env } from '~/config/env'
 
 const db_name = env.TYPEORM_DATABASE

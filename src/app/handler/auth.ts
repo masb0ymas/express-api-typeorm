@@ -1,9 +1,11 @@
 import express, { Request, Response } from 'express'
+
 import { env } from '~/config/env'
 import { asyncHandler } from '~/lib/async-handler'
 import ErrorResponse from '~/lib/http/errors'
 import HttpResponse from '~/lib/http/response'
 import JwtToken from '~/lib/token/jwt'
+
 import { UserLoginState } from '../database/schema/user'
 import authorization from '../middleware/authorization'
 import { UserAgentState } from '../middleware/user-agent'

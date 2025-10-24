@@ -1,6 +1,7 @@
 import { green } from 'colorette'
 import { NextFunction, Request, Response } from 'express'
 import { QueryFailedError } from 'typeorm'
+
 import { logger } from '~/config/logger'
 
 export default async function expressErrorTypeorm(

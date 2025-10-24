@@ -1,7 +1,9 @@
 import cronstrue from 'cronstrue'
 import cron from 'node-cron'
+
 import { env } from '~/config/env'
 import { logger } from '~/config/logger'
+
 import SessionService from '../service/session'
 
 const service = new SessionService()

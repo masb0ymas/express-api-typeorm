@@ -2,7 +2,9 @@ import fs from 'fs'
 import _ from 'lodash'
 import path from 'path'
 import swaggerJSDoc from 'swagger-jsdoc'
+
 import { env } from '~/config/env'
+
 import { currentDir, require } from '../string'
 
 const _pathRouteDocs = path.resolve(`${currentDir}/public/swagger/routes`)

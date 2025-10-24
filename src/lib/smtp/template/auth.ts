@@ -2,6 +2,7 @@ import { green } from 'colorette'
 import fs from 'fs'
 import Handlebars from 'handlebars'
 import path from 'path'
+
 import { env } from '~/config/env'
 import { logger } from '~/config/logger'
 import { smtp } from '~/config/smtp'

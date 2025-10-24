@@ -1,4 +1,5 @@
 import 'dotenv/config'
+
 import { validate } from '~/lib/validate'
 
 export const env = {

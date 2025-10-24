@@ -1,5 +1,7 @@
 import { dropDatabase } from 'typeorm-extension'
+
 import { logger } from '~/config/logger'
+
 import { AppDataSource } from './connection'
 
 async function dropDB() {

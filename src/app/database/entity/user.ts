@@ -10,7 +10,9 @@ import {
   Relation,
   Unique,
 } from 'typeorm'
+
 import Hashing from '~/config/hashing'
+
 import { Base } from './base'
 import { Role } from './role'
 import { Session } from './session'

@@ -1,9 +1,10 @@
 import ErrorResponse from '~/lib/http/errors'
 import { useQuery } from '~/lib/query-builder'
 import { validate } from '~/lib/validate'
+
 import { AppDataSource } from '../database/connection'
 import { User } from '../database/entity/user'
-import { changePasswordSchema, ChangePasswordSchema, userSchema } from '../database/schema/user'
+import { ChangePasswordSchema, changePasswordSchema, userSchema } from '../database/schema/user'
 import BaseService from './base'
 import { DtoFindAll, FindParams } from './types'
 

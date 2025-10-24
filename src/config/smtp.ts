@@ -1,4 +1,5 @@
 import Nodemailer from '~/lib/smtp/nodemailer'
+
 import { env } from './env'
 
 export const smtp = new Nodemailer({

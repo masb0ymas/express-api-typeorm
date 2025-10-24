@@ -1,5 +1,5 @@
-import { z } from "zod"
 import { ObjectLiteral, Repository } from "typeorm"
+import { z } from "zod"
 
 export type BaseServiceParams<T extends ObjectLiteral> = {
   repository: Repository<T>
