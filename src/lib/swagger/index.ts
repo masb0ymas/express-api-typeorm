@@ -24,23 +24,23 @@ const schemaDocs = _getDocsSwaggers(_pathSchemaDocs)
 
 const baseURLServer = [
   {
-    url: env.APP_URL,
-    description: `${_.capitalize(env.NODE_ENV)} Server`,
+    url: env.app.url,
+    description: `${_.capitalize(env.app.nodeEnv)} Server`,
   },
 ]
 
 const swaggerOptURL = [
   {
-    url: `${env.APP_URL}/v1/swagger.json`,
-    name: `${_.capitalize(env.NODE_ENV)} Server`,
+    url: `${env.app.url}/v1/swagger.json`,
+    name: `${_.capitalize(env.app.nodeEnv)} Server`,
   },
 ]
 
 export const swaggerOptions = {
   definition: {
     info: {
-      title: `Api ${env.APP_NAME} Docs`,
-      description: `This is Api Documentation ${env.APP_NAME}`,
+      title: `Api ${env.app.name} Docs`,
+      description: `This is Api Documentation ${env.app.name}`,
       license: {
         name: 'MIT',
       },

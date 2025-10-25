@@ -4,12 +4,12 @@ import { S3StorageParams, StorageType } from '~/lib/storage/types'
 import { env } from './env'
 
 export const storage = Storage.create({
-  storageType: env.STORAGE_PROVIDER as StorageType,
+  storageType: env.storage.provider as StorageType,
   params: {
-    access_key: env.STORAGE_ACCESS_KEY,
-    secret_key: env.STORAGE_SECRET_KEY,
-    bucket: env.STORAGE_BUCKET_NAME,
-    expires: env.STORAGE_SIGN_EXPIRED,
-    region: env.STORAGE_REGION,
+    access_key: env.storage.accessKey,
+    secret_key: env.storage.secretKey,
+    bucket: env.storage.bucketName,
+    expires: env.storage.signExpired,
+    region: env.storage.region,
   } as S3StorageParams, // Change this type for using S3, GCS or MinIO
 })

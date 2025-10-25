@@ -1,5 +1,8 @@
-import { ObjectLiteral, Repository } from "typeorm"
-import { z } from "zod"
+import { ObjectLiteral, Repository } from 'typeorm'
+import { z } from 'zod'
+
+import { QueryFilters } from '../query-builder/filtered'
+import { QuerySorts } from '../query-builder/sorted'
 
 export type BaseServiceParams<T extends ObjectLiteral> = {
   repository: Repository<T>
@@ -10,8 +13,8 @@ export type BaseServiceParams<T extends ObjectLiteral> = {
 export type FindParams = {
   page: number
   pageSize: number
-  filtered: any
-  sorted: any
+  filtered?: QueryFilters[]
+  sorted?: QuerySorts[]
 }
 
 export type DtoFindAll<T extends ObjectLiteral> = {

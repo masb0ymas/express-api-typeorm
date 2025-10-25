@@ -1,7 +1,7 @@
 import compression from 'compression'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
-import express, { Application, ErrorRequestHandler, Request, Response } from 'express'
+import express, { Application, ErrorRequestHandler, Request } from 'express'
 import userAgent from 'express-useragent'
 import helmet from 'helmet'
 import hpp from 'hpp'
@@ -52,7 +52,7 @@ export class App {
     this._app.use(Route)
 
     // Catch error 404 endpoint not found
-    this._app.use('*', (req: Request, _res: Response) => {
+    this._app.use('*', (req: Request) => {
       const method = req.method
       const url = req.originalUrl
       const host = req.hostname

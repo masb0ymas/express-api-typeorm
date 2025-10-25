@@ -3,11 +3,11 @@ import { ObjectLiteral, SelectQueryBuilder } from 'typeorm'
 
 import { env } from '~/config/env'
 
+import { QueryBuilderParams, QueryParams } from '../types/query-builder/query'
 import { validate } from '../validate'
 import { applyFilter } from './filtered'
 import { applyPagination } from './pagination'
 import { applySort } from './sorted'
-import { QueryBuilderParams, QueryParams } from './types'
 
 /**
  * Query builder for TypeORM
@@ -51,6 +51,6 @@ type ConnectType = 'postgres' | 'mysql' | 'mariadb'
  * Use query builder
  */
 export function useQuery<T extends ObjectLiteral>(params: QueryParams<T>) {
-  const connectType = env.TYPEORM_CONNECTION as ConnectType
+  const connectType = env.typeorm.connection as ConnectType
   return QueryBuilder({ params, options: { type: connectType } })
 }

@@ -1,12 +1,12 @@
 import ErrorResponse from '~/lib/http/errors'
 import { useQuery } from '~/lib/query-builder'
+import { DtoFindAll, FindParams } from '~/lib/types/services/base'
 import { validate } from '~/lib/validate'
 
 import { AppDataSource } from '../database/connection'
 import { User } from '../database/entity/user'
 import { ChangePasswordSchema, changePasswordSchema, userSchema } from '../database/schema/user'
 import BaseService from './base'
-import { DtoFindAll, FindParams } from './types'
 
 export default class UserService extends BaseService<User> {
   constructor() {

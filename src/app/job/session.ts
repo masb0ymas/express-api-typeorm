@@ -12,7 +12,7 @@ export default class SessionJob {
   static removeSession() {
     let cronExpression: string
 
-    if (env.NODE_ENV === 'production') {
+    if (env.app.nodeEnv === 'production') {
       cronExpression = '*/30 * * * *'
     } else {
       cronExpression = '*/5 * * * *'

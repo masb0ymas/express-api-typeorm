@@ -1,6 +1,6 @@
 import { ObjectLiteral } from 'typeorm'
 
-import { ApplySortParams, QuerySorts } from './types'
+import { ApplySortParams, QuerySorts } from '../types/query-builder/sorted'
 
 /**
  * Apply sort to query

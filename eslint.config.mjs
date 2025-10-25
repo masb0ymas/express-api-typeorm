@@ -1,17 +1,30 @@
-import eslint from '@eslint/js'
-import eslintConfigPrettier from 'eslint-config-prettier'
-import simpleImportSort from 'eslint-plugin-simple-import-sort'
-import tseslint from 'typescript-eslint'
+import eslint from '@eslint/js';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import { defineConfig } from 'eslint/config';
+import * as tseslint from 'typescript-eslint';
 
-export default tseslint.config(
-  eslint.configs.recommended,
-  eslintConfigPrettier,
-  ...tseslint.configs.recommended,
-  ...tseslint.configs.stylistic,
+export default defineConfig(
+   {
+    // config with just ignores is the replacement for `.eslintignore`
+    ignores: ['build/**', 'dist/**', 'node_modules/**/*'],
+  },
   {
+    files: ['src/**/*.ts'],
     plugins: {
+      '@typescript-eslint': tseslint.plugin,
       'simple-import-sort': simpleImportSort,
     },
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        projectService: true,
+        allowDefaultProject: ['*.mjs', '*.js'],
+      },
+    },
+    extends: [
+      eslint.configs.recommended,
+      tseslint.configs.recommended,
+    ],
     rules: {
       // eslint
       'simple-import-sort/imports': 'error',
@@ -24,6 +37,10 @@ export default tseslint.config(
       '@typescript-eslint/no-var-requires': 'warn',
       '@typescript-eslint/consistent-type-definitions': 'off',
     },
-    ignores: ['.dist/*'],
-  }
+  },
+  {
+    // disable type-aware linting on JS files
+    files: ['**/*.js'],
+    extends: [tseslint.configs.disableTypeChecked],
+  },
 )

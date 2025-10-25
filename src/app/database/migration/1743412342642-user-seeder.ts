@@ -38,7 +38,7 @@ export class UserSeeder1743412342642 implements MigrationInterface {
           ...item,
           id: uuidv4(),
           is_active: true,
-          password: env.APP_DEFAULT_PASS,
+          password: env.app.defaultPass,
           created_at: new Date(),
           updated_at: new Date(),
         })

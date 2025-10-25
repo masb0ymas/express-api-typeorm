@@ -14,7 +14,7 @@ import AuthService from '../service/auth'
 const route = express.Router()
 const service = new AuthService()
 
-const jwt = new JwtToken({ secret: env.JWT_SECRET, expires: env.JWT_EXPIRES })
+const jwt = new JwtToken({ secret: env.jwt.secret, expires: env.jwt.expires })
 
 route.post(
   '/sign-up',
@@ -52,7 +52,7 @@ route.post(
         maxAge: Number(data.expires_in) * 1000,
         httpOnly: true,
         path: '/v1',
-        secure: process.env.NODE_ENV === 'production',
+        secure: env.app.nodeEnv === 'production',
       })
       .json(httpResponse)
   })

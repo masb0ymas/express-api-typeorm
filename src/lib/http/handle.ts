@@ -47,9 +47,9 @@ export function httpHandle(
     const bind = typeof addr === 'string' ? `${addr}` : `${addr?.port}`
 
     const host = cyan(`http://localhost:${bind}`)
-    const nodeEnv = blue(env.NODE_ENV)
+    const nodeEnv = blue(env.app.nodeEnv)
 
-    const msgType = green(`${env.APP_NAME}`)
+    const msgType = green(`${env.app.name}`)
     const message = `server listening on ${host} ⚡️ & env: ${nodeEnv} 🚀`
 
     logger.info(`${msgType} - ${message}`)

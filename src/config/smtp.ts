@@ -4,15 +4,15 @@ import { env } from './env'
 
 export const smtp = new Nodemailer({
   transporter: {
-    host: env.MAIL_HOST,
-    port: env.MAIL_PORT,
-    secure: env.MAIL_ENCRYPTION === 'ssl',
+    host: env.mail.host,
+    port: env.mail.port,
+    secure: env.mail.encryption === 'ssl',
     auth: {
-      user: env.MAIL_USERNAME,
-      pass: env.MAIL_PASSWORD,
+      user: env.mail.username,
+      pass: env.mail.password,
     },
   },
   defaults: {
-    from: env.MAIL_FROM,
+    from: env.mail.from,
   },
 })
