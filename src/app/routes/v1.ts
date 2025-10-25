@@ -23,7 +23,7 @@ function docsSwagger() {
 }
 
 // docs swagger disable for production mode
-if (env.NODE_ENV !== 'production') {
+if (env.app.nodeEnv !== 'production') {
   docsSwagger()
 }
 

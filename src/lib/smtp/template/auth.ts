@@ -61,9 +61,9 @@ export async function SendEmailRegistration(values: SendEmailRegistrationParams)
   const _path = _emailTemplatePath('register.html')
 
   const { fullname, url_token } = values
-  const subject = `${fullname}, Thank you for registering on the ${env.APP_NAME} App`
-  const text = `Please click the link below to verify your email: ${env.APP_URL}/verify/${url_token}`
+  const subject = `${fullname}, Thank you for registering on the ${env.app.name} App`
+  const text = `Please click the link below to verify your email: ${env.app.url}/verify/${url_token}`
 
-  const data = { ...values, subject, text, APP_NAME: env.APP_NAME }
+  const data = { ...values, subject, text, APP_NAME: env.app.name }
   await _sendMail(_path, data)
 }

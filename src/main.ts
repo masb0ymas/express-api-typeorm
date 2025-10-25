@@ -12,7 +12,7 @@ import { mailExists, storageExists } from './lib/boolean'
 import { httpHandle } from './lib/http/handle'
 
 function bootstrap() {
-  const port = env.APP_PORT
+  const port = env.app.port
   const app = new App().create
   const server = http.createServer(app)
   const isStorageEnabled = storageExists()

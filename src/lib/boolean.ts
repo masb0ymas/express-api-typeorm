@@ -4,20 +4,17 @@ import { env } from '~/config/env'
  * Check if storage is enabled
  */
 export function storageExists(): boolean {
-  switch (env.STORAGE_PROVIDER) {
+  switch (env.storage.provider) {
     case 'minio':
       return Boolean(
-        env.STORAGE_HOST &&
-          env.STORAGE_BUCKET_NAME &&
-          env.STORAGE_ACCESS_KEY &&
-          env.STORAGE_SECRET_KEY
+        env.storage.host && env.storage.bucketName && env.storage.accessKey && env.storage.secretKey
       )
 
     case 's3':
-      return Boolean(env.STORAGE_BUCKET_NAME && env.STORAGE_ACCESS_KEY && env.STORAGE_SECRET_KEY)
+      return Boolean(env.storage.bucketName && env.storage.accessKey && env.storage.secretKey)
 
     case 'gcs':
-      return Boolean(env.STORAGE_ACCESS_KEY && env.STORAGE_BUCKET_NAME && env.STORAGE_FILEPATH)
+      return Boolean(env.storage.accessKey && env.storage.bucketName && env.storage.filepath)
 
     default:
       return false
@@ -29,6 +26,6 @@ export function storageExists(): boolean {
  */
 export function mailExists(): boolean {
   return Boolean(
-    env.MAIL_HOST && env.MAIL_PORT && env.MAIL_USERNAME && env.MAIL_PASSWORD && env.MAIL_FROM
+    env.mail.host && env.mail.port && env.mail.username && env.mail.password && env.mail.from
   )
 }

@@ -2,8 +2,8 @@ import { MigrationInterface, QueryRunner } from 'typeorm'
 
 import { env } from '~/config/env'
 
-const db_name = env.TYPEORM_DATABASE
-const timezone = env.TYPEORM_TIMEZONE
+const db_name = env.typeorm.database
+const timezone = env.typeorm.timezone
 
 export class Postgresql1743411980326 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {

@@ -24,7 +24,7 @@ type VerifySessionParams = {
 
 type LogoutParams = VerifySessionParams
 
-const jwt = new JwtToken({ secret: env.JWT_SECRET, expires: env.JWT_EXPIRES })
+const jwt = new JwtToken({ secret: env.jwt.secret, expires: env.jwt.expires })
 const sessionService = new SessionService()
 
 export default class AuthService {
