@@ -13,7 +13,7 @@
     "paths": {
       "~/*": ["./src/*"]
     },
-    "typeRoots": ["./src/lib/types"],
+    "typeRoots": ["src/types"],
 
     /* JavaScript Support */
     "allowJs": true,
