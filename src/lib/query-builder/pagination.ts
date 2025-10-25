@@ -1,7 +1,7 @@
 import { ObjectLiteral } from 'typeorm'
 
+import { ApplyPaginationParams, CalculatePageSizeParams } from '../types/query-builder/pagination'
 import { validate } from '../validate'
-import { ApplyPaginationParams, CalculatePageSizeParams } from './types'
 
 /**
  * Calculate page size

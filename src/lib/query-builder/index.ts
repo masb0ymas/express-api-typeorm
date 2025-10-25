@@ -3,11 +3,11 @@ import { ObjectLiteral, SelectQueryBuilder } from 'typeorm'
 
 import { env } from '~/config/env'
 
+import { QueryBuilderParams, QueryParams } from '../types/query-builder/query'
 import { validate } from '../validate'
 import { applyFilter } from './filtered'
 import { applyPagination } from './pagination'
 import { applySort } from './sorted'
-import { QueryBuilderParams, QueryParams } from './types'
 
 /**
  * Query builder for TypeORM

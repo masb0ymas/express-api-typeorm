@@ -1,8 +1,8 @@
 import { ObjectLiteral } from 'typeorm'
 import { validate as uuidValidate } from 'uuid'
 
+import { ApplyFilterParams, QueryFilters } from '../types/query-builder/filtered'
 import { validate } from '../validate'
-import { ApplyFilterParams, QueryFilters } from './types'
 
 /**
  * Apply filter

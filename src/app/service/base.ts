@@ -4,9 +4,8 @@ import { z } from 'zod'
 
 import ErrorResponse from '~/lib/http/errors'
 import { useQuery } from '~/lib/query-builder'
+import { BaseServiceParams, DtoFindAll, FindParams } from '~/lib/types/services/base'
 import { validate } from '~/lib/validate'
-
-import { BaseServiceParams, DtoFindAll, FindParams } from './types'
 
 export default class BaseService<T extends ObjectLiteral> {
   public repository: Repository<T>
