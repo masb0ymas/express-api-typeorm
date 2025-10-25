@@ -33,20 +33,24 @@ fi
 if [ -f "$BASE_ENV_FILE" ]; then
   # Check if .env already exists
   if [ -f "$ENV_FILE" ]; then
-    echo " - Warning: $ENV_FILE already exists. Please remove it manually."
-    exit 1
+    # Update values in .env file
+    $SED_CMD "s|^APP_DEFAULT_PASS=.*|APP_DEFAULT_PASS='$APP_DEFAULT_PASS'|" "$ENV_FILE"
+    $SED_CMD "s|^APP_SECRET=.*|APP_SECRET='$APP_SECRET'|" "$ENV_FILE"
+    $SED_CMD "s|^JWT_SECRET=.*|JWT_SECRET='$JWT_SECRET'|" "$ENV_FILE"
+
+    echo " - Secrets have been updated to $ENV_FILE file"
+  else
+    cp "$BASE_ENV_FILE" "$ENV_FILE"
+    echo " - Copy $BASE_ENV_FILE to $ENV_FILE"
+
+    # Update values in .env file
+    $SED_CMD "s|^APP_DEFAULT_PASS=.*|APP_DEFAULT_PASS='$APP_DEFAULT_PASS'|" "$ENV_FILE"
+    $SED_CMD "s|^APP_SECRET=.*|APP_SECRET='$APP_SECRET'|" "$ENV_FILE"
+    $SED_CMD "s|^JWT_SECRET=.*|JWT_SECRET='$JWT_SECRET'|" "$ENV_FILE"
+
+    echo " - Secrets have been generated and saved to $ENV_FILE file"
   fi
 
-  cp "$BASE_ENV_FILE" "$ENV_FILE"
-  echo " - Copy $BASE_ENV_FILE to $ENV_FILE"
-
-  # Update values in .env file
-  $SED_CMD "s|^TYPEORM_PASSWORD=.*|TYPEORM_PASSWORD='$TYPEORM_PASSWORD'|" "$ENV_FILE"
-  $SED_CMD "s|^APP_DEFAULT_PASS=.*|APP_DEFAULT_PASS='$APP_DEFAULT_PASS'|" "$ENV_FILE"
-  $SED_CMD "s|^APP_SECRET=.*|APP_SECRET='$APP_SECRET'|" "$ENV_FILE"
-  $SED_CMD "s|^JWT_SECRET=.*|JWT_SECRET='$JWT_SECRET'|" "$ENV_FILE"
-
-  echo " - Secrets have been generated and saved to $ENV_FILE file"
 else
   echo " - Warning: $BASE_ENV_FILE does not exist. Cannot create environment file."
   exit 1

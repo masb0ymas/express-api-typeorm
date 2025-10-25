@@ -1,3 +1,5 @@
+import './config/env' // validate .env before run the app
+
 import http from 'http'
 
 import { initDatabase } from './app/database/connection'
