@@ -1,7 +1,9 @@
 import { green } from 'colorette'
 import nodemailer from 'nodemailer'
 import SMTPTransport from 'nodemailer/lib/smtp-transport'
+
 import { logger } from '~/config/logger'
+
 import { NodemailerParams } from './types'
 
 export default class Nodemailer {

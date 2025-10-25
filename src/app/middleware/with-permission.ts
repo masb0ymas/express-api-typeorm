@@ -1,7 +1,9 @@
 import { green } from 'colorette'
 import { NextFunction, Request, Response } from 'express'
+
 import { logger } from '~/config/logger'
 import { asyncHandler } from '~/lib/async-handler'
+
 import { AppDataSource } from '../database/connection'
 import { User } from '../database/entity/user'
 import { UserLoginState } from '../database/schema/user'

@@ -1,4 +1,5 @@
 import { z } from 'zod'
+
 import { BaseSchema } from '../entity/base'
 
 // Schema

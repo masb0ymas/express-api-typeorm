@@ -1,7 +1,9 @@
 import express, { Request, Response } from 'express'
+
 import { asyncHandler } from '~/lib/async-handler'
 import { ConstRole } from '~/lib/constant/seed/role'
 import HttpResponse from '~/lib/http/response'
+
 import authorization from '../middleware/authorization'
 import { permissionAccess } from '../middleware/with-permission'
 import RoleService from '../service/role'

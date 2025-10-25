@@ -1,4 +1,5 @@
 import { ObjectLiteral } from 'typeorm'
+
 import { ApplySortParams, QuerySorts } from './types'
 
 /**

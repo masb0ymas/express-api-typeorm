@@ -1,9 +1,11 @@
 import { NextFunction, Request, Response } from 'express'
+import _ from 'lodash'
+
 import { env } from '~/config/env'
 import { asyncHandler } from '~/lib/async-handler'
 import JwtToken from '~/lib/token/jwt'
+
 import SessionService from '../service/session'
-import _ from 'lodash'
 
 const jwt = new JwtToken({ secret: env.JWT_SECRET, expires: env.JWT_EXPIRES })
 const sessionService = new SessionService()

@@ -7,6 +7,7 @@ import helmet from 'helmet'
 import hpp from 'hpp'
 import path from 'path'
 import requestIp from 'request-ip'
+
 import expressErrorHandle from '~/app/middleware/error-handle'
 import expressErrorTypeorm from '~/app/middleware/error-typeorm'
 import expressErrorValidation from '~/app/middleware/error-validation'
@@ -17,6 +18,7 @@ import { Route } from '~/app/routes/route'
 import { allowedCors } from '~/lib/constant/allowed-cors'
 import ErrorResponse from '~/lib/http/errors'
 import { currentDir } from '~/lib/string'
+
 import { httpLogger } from './logger'
 
 export class App {

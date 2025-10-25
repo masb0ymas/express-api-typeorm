@@ -3,8 +3,10 @@ import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 import { green } from 'colorette'
 import { addDays } from 'date-fns'
 import fs from 'fs'
+
 import { logger } from '~/config/logger'
 import { ms } from '~/lib/date'
+
 import { S3StorageParams, UploadFileParams } from './types'
 
 export default class S3Storage {

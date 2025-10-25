@@ -1,7 +1,9 @@
 import { Request } from 'express'
 import jwt from 'jsonwebtoken'
 import _ from 'lodash'
+
 import { logger } from '~/config/logger'
+
 import { ms } from '../date'
 
 type JwtTokenParams = {

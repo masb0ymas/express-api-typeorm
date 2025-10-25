@@ -1,7 +1,8 @@
+import { cwd } from 'node:process'
+
 import { createRequire } from 'module'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { cwd } from 'node:process'
 
 const __filename = fileURLToPath(import.meta.url)
 export const require = createRequire(import.meta.url)

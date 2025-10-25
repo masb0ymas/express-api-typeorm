@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import { Repository } from 'typeorm'
 import { v4 as uuidv4 } from 'uuid'
+
 import { env } from '~/config/env'
 import { mailExists } from '~/lib/boolean'
 import { ConstRole } from '~/lib/constant/seed/role'
@@ -8,6 +9,7 @@ import ErrorResponse from '~/lib/http/errors'
 import { SendEmailRegistration } from '~/lib/smtp/template/auth'
 import JwtToken from '~/lib/token/jwt'
 import { validate } from '~/lib/validate'
+
 import { AppDataSource } from '../database/connection'
 import { Role } from '../database/entity/role'
 import { Session } from '../database/entity/session'
