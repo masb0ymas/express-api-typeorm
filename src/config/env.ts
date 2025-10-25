@@ -20,7 +20,7 @@ const EnvSchema = z.object({
   TYPEORM_MIGRATIONS_RUN: z.string().transform(Boolean),
   TYPEORM_TIMEZONE: z.string(),
 
-  STORAGE_PROVIDER: z.enum(['local', 's3', 'minio', 'google', 'aws']),
+  STORAGE_PROVIDER: z.enum(['local', 's3', 'minio', 'gcs', 'aws']),
   STORAGE_HOST: z.string().optional(),
   STORAGE_PORT: z.string().transform(Number).optional(),
   STORAGE_ACCESS_KEY: z.string().optional(),
