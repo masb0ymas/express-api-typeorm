@@ -1,3 +1,5 @@
+import './config/env'
+
 import http from 'http'
 import { initDatabase } from './app/database/connection'
 import Job from './app/job'
