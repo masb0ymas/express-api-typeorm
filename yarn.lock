@@ -671,10 +671,10 @@
   resolved "https://registry.yarnpkg.com/@aws/lambda-invoke-store/-/lambda-invoke-store-0.0.1.tgz#92d792a7dda250dfcb902e13228f37a81be57c8f"
   integrity sha512-ORHRQ2tmvnBXc8t/X9Z8IcSbBA4xTLKuN873FopzklHMeqBst7YG0d+AX97inkvDX+NChYtSr+qGfcqGFaI8Zw==
 
-"@dotenvx/dotenvx@^1.51.0":
-  version "1.51.0"
-  resolved "https://registry.yarnpkg.com/@dotenvx/dotenvx/-/dotenvx-1.51.0.tgz#6faf730e7cf532f0ecafdc87dc854d07e31c2915"
-  integrity sha512-CbMGzyOYSyFF7d4uaeYwO9gpSBzLTnMmSmTVpCZjvpJFV69qYbjYPpzNnCz1mb2wIvEhjWjRwQWuBzTO0jITww==
+"@dotenvx/dotenvx@^1.51.1":
+  version "1.51.2"
+  resolved "https://registry.yarnpkg.com/@dotenvx/dotenvx/-/dotenvx-1.51.2.tgz#6701c5a7a4105a14a47666b0ea2056b87fddb79e"
+  integrity sha512-+693mNflujDZxudSEqSNGpn92QgFhJlBn9q2mDQ9yGWyHuz3hZ8B5g3EXCwdAz4DMJAI+OFCIbfEFZS+YRdrEA==
   dependencies:
     commander "^11.1.0"
     dotenv "^17.2.1"
