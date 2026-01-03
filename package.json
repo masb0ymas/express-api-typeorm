@@ -55,7 +55,7 @@
     "cors": "^2.8.5",
     "cronstrue": "^3.9.0",
     "date-fns": "^4.1.0",
-    "express": "4.21.2",
+    "express": "4.22.0",
     "express-async-handler": "^1.2.0",
     "express-rate-limit": "^8.1.0",
     "express-useragent": "^1.0.15",
