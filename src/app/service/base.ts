@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { FindOneOptions, In, ObjectLiteral, Repository } from 'typeorm'
+import { FindOneOptions, FindOptionsWhere, In, ObjectLiteral, Repository } from 'typeorm'
 import { z } from 'zod'
 
 import ErrorResponse from '~/lib/http/errors'
@@ -54,8 +54,7 @@ export default class BaseService<T extends ObjectLiteral> {
   async findById(id: string, options?: FindOneOptions<T>): Promise<T> {
     const newId = validate.uuid(id)
 
-    // @ts-expect-error
-    return this._findOne({ where: { id: newId }, ...options })
+    return this._findOne({ where: { id: newId } as unknown as FindOptionsWhere<T>, ...options })
   }
 
   /**
@@ -117,8 +116,7 @@ export default class BaseService<T extends ObjectLiteral> {
   async multipleRestore(ids: string[]) {
     const newIds = this._validateIds(ids)
 
-    // @ts-expect-error
-    await this.repository.restore({ where: { id: In(newIds) }, withDeleted: true })
+    await this.repository.restore({ id: In(newIds) } as unknown as FindOptionsWhere<T>)
   }
 
   /**
@@ -127,8 +125,7 @@ export default class BaseService<T extends ObjectLiteral> {
   async multipleSoftDelete(ids: string[]) {
     const newIds = this._validateIds(ids)
 
-    // @ts-expect-error
-    await this.repository.softDelete({ where: { id: In(newIds) } })
+    await this.repository.softDelete({ id: In(newIds) } as unknown as FindOptionsWhere<T>)
   }
 
   /**
@@ -137,7 +134,6 @@ export default class BaseService<T extends ObjectLiteral> {
   async multipleForceDelete(ids: string[]) {
     const newIds = this._validateIds(ids)
 
-    // @ts-expect-error
-    await this.repository.delete({ where: { id: In(newIds) } })
+    await this.repository.delete({ id: In(newIds) } as unknown as FindOptionsWhere<T>)
   }
 }

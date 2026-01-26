@@ -5,6 +5,13 @@ import { ApplyFilterParams, QueryFilters } from '../types/query-builder/filtered
 import { validate } from '../validate'
 
 /**
+ * Validate field name to prevent SQL injection
+ */
+function isValidFieldName(field: string): boolean {
+  return /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(field)
+}
+
+/**
  * Apply filter
  */
 export function applyFilter<T extends ObjectLiteral>({
@@ -24,6 +31,11 @@ export function applyFilter<T extends ObjectLiteral>({
   if (filtered.length > 0) {
     for (let i = 0; i < filtered.length; i += 1) {
       const item = filtered[i]
+
+      // Validate field name to prevent SQL injection
+      if (!isValidFieldName(item.id)) {
+        continue // Skip invalid field names
+      }
 
       const check_uuid = uuidValidate(item.value)
       const check_numeric = validate.number(item.value)
@@ -52,3 +64,4 @@ export function applyFilter<T extends ObjectLiteral>({
     }
   }
 }
+

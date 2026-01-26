@@ -6,7 +6,7 @@ import { env } from '~/config/env'
 import { logger } from '~/config/logger'
 
 export const AppDataSource = new DataSource({
-  type: env.typeorm.connection as 'mysql' | 'postgres',
+  type: env.typeorm.connection as 'mysql' | 'postgres' | 'sqlite',
   host: env.typeorm.host,
   port: env.typeorm.port,
   username: env.typeorm.username,

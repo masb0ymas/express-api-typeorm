@@ -1,3 +1,4 @@
+import Hashing from '~/config/hashing'
 import ErrorResponse from '~/lib/http/errors'
 import { useQuery } from '~/lib/query-builder'
 import { DtoFindAll, FindParams } from '~/lib/types/services/base'
@@ -7,6 +8,8 @@ import { AppDataSource } from '../database/connection'
 import { User } from '../database/entity/user'
 import { ChangePasswordSchema, changePasswordSchema, userSchema } from '../database/schema/user'
 import BaseService from './base'
+
+const hashing = new Hashing()
 
 export default class UserService extends BaseService<User> {
   constructor() {
@@ -89,10 +92,13 @@ export default class UserService extends BaseService<User> {
       throw new ErrorResponse.BadRequest('current password is incorrect')
     }
 
+    // Hash the new password before saving
+    const hashedPassword = await hashing.hash(values.new_password)
+
     // update password
     await this.repository.save({
       ...record,
-      password: values.new_password,
+      password: hashedPassword,
     })
   }
 }

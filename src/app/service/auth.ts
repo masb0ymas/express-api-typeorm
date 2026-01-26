@@ -54,10 +54,9 @@ export default class AuthService {
       upload_id: null,
     })
 
-    // @ts-expect-error
-    const formRegister: User = { ...values, password: validate.empty(formData.new_password) }
+    const formRegister = { ...values, password: validate.empty(formData.new_password) }
     const userEntity = new User()
-    const data = await this._repository.save({ ...userEntity, ...formRegister })
+    const data = await this._repository.save({ ...userEntity, ...formRegister } as unknown as User)
 
     if (isMailEnabled) {
       await SendEmailRegistration({
@@ -113,8 +112,7 @@ export default class AuthService {
       const sessionEntity = new Session()
       const formSession = { ...formData, user_id: getUser.id, token }
 
-      // @ts-expect-error
-      await repo.session.save({ ...sessionEntity, ...formSession })
+      await repo.session.save({ ...sessionEntity, ...formSession } as unknown as Session)
       const is_admin = [ConstRole.ID_ADMIN, ConstRole.ID_SUPER_ADMIN].includes(getRole.id)
 
       data = {

@@ -34,7 +34,7 @@ export const logger = pino(
 )
 
 export const httpLogger = pinoHttp({
-  logger: logger,
+  logger: logger as any,
 
   // Define a custom request id function
   genReqId: function (req, res) {

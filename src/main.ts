@@ -11,7 +11,7 @@ import { storage } from './config/storage'
 import { mailExists, storageExists } from './lib/boolean'
 import { httpHandle } from './lib/http/handle'
 
-function bootstrap() {
+async function bootstrap() {
   const port = env.app.port
   const app = new App().create
   const server = http.createServer(app)
@@ -19,7 +19,7 @@ function bootstrap() {
   const isMailEnabled = mailExists()
 
   // initial database
-  initDatabase()
+  await initDatabase()
 
   // initial storage
   if (isStorageEnabled) {
@@ -43,4 +43,7 @@ function bootstrap() {
   server.on('listening', onListening)
 }
 
-bootstrap()
+bootstrap().catch((error) => {
+  console.error('Failed to start server:', error)
+  process.exit(1)
+})

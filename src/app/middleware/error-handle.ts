@@ -16,21 +16,30 @@ function generateErrorResponse(err: Error, statusCode: number): DtoErrorResponse
     : { statusCode, error: err.name, message: err.message }
 }
 
-export default async function expressErrorHandle(
+export default function expressErrorHandle(
   err: any,
   _req: Request,
   res: Response,
-  next: NextFunction
-) {
+  _next: NextFunction
+): void {
   // catch error from multer
   if (err instanceof multer.MulterError) {
-    return res.status(400).json(generateErrorResponse(err, 400))
+    res.status(400).json(generateErrorResponse(err, 400))
+    return
   }
 
   // catch from global error
   if (err instanceof ErrorResponse.BaseResponse) {
-    return res.status(err.statusCode).json(generateErrorResponse(err, err.statusCode))
+    res.status(err.statusCode).json(generateErrorResponse(err, err.statusCode))
+    return
   }
 
-  next(err)
+  // Fallback for unhandled errors
+  const statusCode = err.statusCode || 500
+  const message = err.message || 'Internal Server Error'
+  res.status(statusCode).json({
+    statusCode,
+    error: err.name || 'Error',
+    message,
+  })
 }

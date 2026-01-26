@@ -31,12 +31,11 @@ export default class SessionService extends BaseService<Session> {
     const session = await this.repository.findOne({ where: { user_id: values.user_id } })
 
     if (session) {
-      // @ts-expect-error
-      await this.repository.save({ ...session, ...values })
+      await this.repository.save({ ...session, ...values } as Session)
+      return
     }
 
-    // @ts-expect-error
-    await this.repository.save(values)
+    await this.repository.save(values as Session)
   }
 
   /**
