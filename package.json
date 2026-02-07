@@ -43,10 +43,10 @@
     "node": ">=20.x"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.917.0",
-    "@aws-sdk/s3-request-presigner": "^3.917.0",
+    "@aws-sdk/client-s3": "^3.974.0",
+    "@aws-sdk/s3-request-presigner": "^3.980.0",
     "@dotenvx/dotenvx": "^1.51.0",
-    "@google-cloud/storage": "^7.17.2",
+    "@google-cloud/storage": "^7.19.0",
     "argon2": "^0.44.0",
     "colorette": "^2.0.20",
     "compression": "^1.8.1",
